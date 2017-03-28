@@ -1,0 +1,546 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C3545CCC1E4808D800557163 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3545CCB1E4808D800557163 /* AppDelegate.swift */; };
+		C3545CCE1E4808D800557163 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3545CCD1E4808D800557163 /* ViewController.swift */; };
+		C3545CD11E4808D800557163 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3545CCF1E4808D800557163 /* Main.storyboard */; };
+		C3545CD31E4808D800557163 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C3545CD21E4808D800557163 /* Assets.xcassets */; };
+		C3545CD61E4808D800557163 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3545CD41E4808D800557163 /* LaunchScreen.storyboard */; };
+		C3545CE11E4808D900557163 /* OfficeLightingManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3545CE01E4808D900557163 /* OfficeLightingManagerTests.swift */; };
+		C3545CEC1E4808D900557163 /* OfficeLightingManagerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3545CEB1E4808D900557163 /* OfficeLightingManagerUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C3545CDD1E4808D900557163 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C3545CC01E4808D800557163 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C3545CC71E4808D800557163;
+			remoteInfo = OfficeLightingManager;
+		};
+		C3545CE81E4808D900557163 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C3545CC01E4808D800557163 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C3545CC71E4808D800557163;
+			remoteInfo = OfficeLightingManager;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		C3545CC81E4808D800557163 /* OfficeLightingManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OfficeLightingManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C3545CCB1E4808D800557163 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C3545CCD1E4808D800557163 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C3545CD01E4808D800557163 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C3545CD21E4808D800557163 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C3545CD51E4808D800557163 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C3545CD71E4808D800557163 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C3545CDC1E4808D900557163 /* OfficeLightingManagerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OfficeLightingManagerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C3545CE01E4808D900557163 /* OfficeLightingManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfficeLightingManagerTests.swift; sourceTree = "<group>"; };
+		C3545CE21E4808D900557163 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C3545CE71E4808D900557163 /* OfficeLightingManagerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OfficeLightingManagerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C3545CEB1E4808D900557163 /* OfficeLightingManagerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfficeLightingManagerUITests.swift; sourceTree = "<group>"; };
+		C3545CED1E4808D900557163 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C3545CC51E4808D800557163 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C3545CD91E4808D900557163 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C3545CE41E4808D900557163 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C3545CBF1E4808D800557163 = {
+			isa = PBXGroup;
+			children = (
+				C3545CCA1E4808D800557163 /* OfficeLightingManager */,
+				C3545CDF1E4808D900557163 /* OfficeLightingManagerTests */,
+				C3545CEA1E4808D900557163 /* OfficeLightingManagerUITests */,
+				C3545CC91E4808D800557163 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C3545CC91E4808D800557163 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C3545CC81E4808D800557163 /* OfficeLightingManager.app */,
+				C3545CDC1E4808D900557163 /* OfficeLightingManagerTests.xctest */,
+				C3545CE71E4808D900557163 /* OfficeLightingManagerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C3545CCA1E4808D800557163 /* OfficeLightingManager */ = {
+			isa = PBXGroup;
+			children = (
+				C3545CCB1E4808D800557163 /* AppDelegate.swift */,
+				C3545CCD1E4808D800557163 /* ViewController.swift */,
+				C3545CCF1E4808D800557163 /* Main.storyboard */,
+				C3545CD21E4808D800557163 /* Assets.xcassets */,
+				C3545CD41E4808D800557163 /* LaunchScreen.storyboard */,
+				C3545CD71E4808D800557163 /* Info.plist */,
+			);
+			path = OfficeLightingManager;
+			sourceTree = "<group>";
+		};
+		C3545CDF1E4808D900557163 /* OfficeLightingManagerTests */ = {
+			isa = PBXGroup;
+			children = (
+				C3545CE01E4808D900557163 /* OfficeLightingManagerTests.swift */,
+				C3545CE21E4808D900557163 /* Info.plist */,
+			);
+			path = OfficeLightingManagerTests;
+			sourceTree = "<group>";
+		};
+		C3545CEA1E4808D900557163 /* OfficeLightingManagerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				C3545CEB1E4808D900557163 /* OfficeLightingManagerUITests.swift */,
+				C3545CED1E4808D900557163 /* Info.plist */,
+			);
+			path = OfficeLightingManagerUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C3545CC71E4808D800557163 /* OfficeLightingManager */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C3545CF01E4808D900557163 /* Build configuration list for PBXNativeTarget "OfficeLightingManager" */;
+			buildPhases = (
+				C3545CC41E4808D800557163 /* Sources */,
+				C3545CC51E4808D800557163 /* Frameworks */,
+				C3545CC61E4808D800557163 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OfficeLightingManager;
+			productName = OfficeLightingManager;
+			productReference = C3545CC81E4808D800557163 /* OfficeLightingManager.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C3545CDB1E4808D900557163 /* OfficeLightingManagerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C3545CF31E4808D900557163 /* Build configuration list for PBXNativeTarget "OfficeLightingManagerTests" */;
+			buildPhases = (
+				C3545CD81E4808D900557163 /* Sources */,
+				C3545CD91E4808D900557163 /* Frameworks */,
+				C3545CDA1E4808D900557163 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C3545CDE1E4808D900557163 /* PBXTargetDependency */,
+			);
+			name = OfficeLightingManagerTests;
+			productName = OfficeLightingManagerTests;
+			productReference = C3545CDC1E4808D900557163 /* OfficeLightingManagerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		C3545CE61E4808D900557163 /* OfficeLightingManagerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C3545CF61E4808D900557163 /* Build configuration list for PBXNativeTarget "OfficeLightingManagerUITests" */;
+			buildPhases = (
+				C3545CE31E4808D900557163 /* Sources */,
+				C3545CE41E4808D900557163 /* Frameworks */,
+				C3545CE51E4808D900557163 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C3545CE91E4808D900557163 /* PBXTargetDependency */,
+			);
+			name = OfficeLightingManagerUITests;
+			productName = OfficeLightingManagerUITests;
+			productReference = C3545CE71E4808D900557163 /* OfficeLightingManagerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C3545CC01E4808D800557163 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = ROE;
+				TargetAttributes = {
+					C3545CC71E4808D800557163 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = F79RL87723;
+						ProvisioningStyle = Automatic;
+					};
+					C3545CDB1E4808D900557163 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = F79RL87723;
+						ProvisioningStyle = Automatic;
+						TestTargetID = C3545CC71E4808D800557163;
+					};
+					C3545CE61E4808D900557163 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = F79RL87723;
+						ProvisioningStyle = Automatic;
+						TestTargetID = C3545CC71E4808D800557163;
+					};
+				};
+			};
+			buildConfigurationList = C3545CC31E4808D800557163 /* Build configuration list for PBXProject "OfficeLightingManager" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C3545CBF1E4808D800557163;
+			productRefGroup = C3545CC91E4808D800557163 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C3545CC71E4808D800557163 /* OfficeLightingManager */,
+				C3545CDB1E4808D900557163 /* OfficeLightingManagerTests */,
+				C3545CE61E4808D900557163 /* OfficeLightingManagerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C3545CC61E4808D800557163 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C3545CD61E4808D800557163 /* LaunchScreen.storyboard in Resources */,
+				C3545CD31E4808D800557163 /* Assets.xcassets in Resources */,
+				C3545CD11E4808D800557163 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C3545CDA1E4808D900557163 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C3545CE51E4808D900557163 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C3545CC41E4808D800557163 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C3545CCE1E4808D800557163 /* ViewController.swift in Sources */,
+				C3545CCC1E4808D800557163 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C3545CD81E4808D900557163 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C3545CE11E4808D900557163 /* OfficeLightingManagerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C3545CE31E4808D900557163 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C3545CEC1E4808D900557163 /* OfficeLightingManagerUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C3545CDE1E4808D900557163 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C3545CC71E4808D800557163 /* OfficeLightingManager */;
+			targetProxy = C3545CDD1E4808D900557163 /* PBXContainerItemProxy */;
+		};
+		C3545CE91E4808D900557163 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C3545CC71E4808D800557163 /* OfficeLightingManager */;
+			targetProxy = C3545CE81E4808D900557163 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C3545CCF1E4808D800557163 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C3545CD01E4808D800557163 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C3545CD41E4808D800557163 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C3545CD51E4808D800557163 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C3545CEE1E4808D900557163 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C3545CEF1E4808D900557163 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C3545CF11E4808D900557163 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = F79RL87723;
+				INFOPLIST_FILE = OfficeLightingManager/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ROE.OfficeLightingManager;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		C3545CF21E4808D900557163 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = F79RL87723;
+				INFOPLIST_FILE = OfficeLightingManager/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ROE.OfficeLightingManager;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Release;
+		};
+		C3545CF41E4808D900557163 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = F79RL87723;
+				INFOPLIST_FILE = OfficeLightingManagerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ROE.OfficeLightingManagerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OfficeLightingManager.app/OfficeLightingManager";
+			};
+			name = Debug;
+		};
+		C3545CF51E4808D900557163 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = F79RL87723;
+				INFOPLIST_FILE = OfficeLightingManagerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ROE.OfficeLightingManagerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OfficeLightingManager.app/OfficeLightingManager";
+			};
+			name = Release;
+		};
+		C3545CF71E4808D900557163 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = F79RL87723;
+				INFOPLIST_FILE = OfficeLightingManagerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ROE.OfficeLightingManagerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = OfficeLightingManager;
+			};
+			name = Debug;
+		};
+		C3545CF81E4808D900557163 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = F79RL87723;
+				INFOPLIST_FILE = OfficeLightingManagerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ROE.OfficeLightingManagerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = OfficeLightingManager;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C3545CC31E4808D800557163 /* Build configuration list for PBXProject "OfficeLightingManager" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C3545CEE1E4808D900557163 /* Debug */,
+				C3545CEF1E4808D900557163 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C3545CF01E4808D900557163 /* Build configuration list for PBXNativeTarget "OfficeLightingManager" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C3545CF11E4808D900557163 /* Debug */,
+				C3545CF21E4808D900557163 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C3545CF31E4808D900557163 /* Build configuration list for PBXNativeTarget "OfficeLightingManagerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C3545CF41E4808D900557163 /* Debug */,
+				C3545CF51E4808D900557163 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C3545CF61E4808D900557163 /* Build configuration list for PBXNativeTarget "OfficeLightingManagerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C3545CF71E4808D900557163 /* Debug */,
+				C3545CF81E4808D900557163 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C3545CC01E4808D800557163 /* Project object */;
+}
