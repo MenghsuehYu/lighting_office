@@ -348,11 +348,6 @@ class SecondPage: UIViewController, UIPickerViewDelegate, CBPeripheralDelegate {
             print(error)
         }
     }
-    
-    ////
-    func peripheral(_ peripheral: CBPeripheral, didUpdateValueFor characteristic: CBCharacteristic, error: Error?) {
-        print("didUpdateValueFor:"+characteristic.uuid.uuidString)
-    }
     /*
     // MARK: - Navigation
 
