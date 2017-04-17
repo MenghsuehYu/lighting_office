@@ -84,7 +84,7 @@ class SecondPage: UIViewController, UIPickerViewDelegate, CBPeripheralDelegate {
     }
     
     func appMovedToBackground() {
-        print("Second page get into background")
+        NSLog("SecondPage, get into background.")
         dismiss(animated: true, completion: nil)
     }
     
@@ -135,13 +135,13 @@ class SecondPage: UIViewController, UIPickerViewDelegate, CBPeripheralDelegate {
             mGroupId = GROUP_IDS[key]!
             mSelectedAreaKey.text = "Group id::"
             mSelectedAreaValue.text = String(mGroupId)
-            print("PickerView selected group id = \(mGroupId)")
+            NSLog("SecondPage, pickerView selected group id = \(mGroupId)")
             break
         case 1:
             mAddressId = row
             mSelectedAreaKey.text = "Address id::"
             mSelectedAreaValue.text = String(mAddressId)
-            print("PickerView selected address id = \(mAddressId)")
+            NSLog("SecondPage, pickerView selected address id = \(mAddressId)")
             break
         default:
             break
@@ -170,7 +170,7 @@ class SecondPage: UIViewController, UIPickerViewDelegate, CBPeripheralDelegate {
     @IBAction func onClick(_ sender: Any) {
         var command:UInt16
         
-        print("OnClick group id:\(mGroupId), address id:\(mAddressId)")
+        NSLog("SecondPage, onClick group id:\(mGroupId), address id:\(mAddressId)")
         if mGroupAddressSegment.selectedSegmentIndex == 0 {
             // power on command:0x1000+(0x80+id*2)+1
             command = UInt16(0x1000+(0x80+mGroupId*2)+1)
@@ -184,7 +184,7 @@ class SecondPage: UIViewController, UIPickerViewDelegate, CBPeripheralDelegate {
         do {
             try sendData(commandData as Data, uuidString: "2A55", writeType: .withResponse)
         } catch {
-            print(error)
+            NSLog("SecondPage, onClick() error:\(error)")
         }
         
         mBrightnessSlider.value = 254
@@ -194,7 +194,7 @@ class SecondPage: UIViewController, UIPickerViewDelegate, CBPeripheralDelegate {
     @IBAction func offClick(_ sender: Any) {
         var command:UInt16
         
-        print("OffClick group id:\(mGroupId), address id:\(mAddressId)")
+        NSLog("SecondPage, offClick group id:\(mGroupId), address id:\(mAddressId)")
         if mGroupAddressSegment.selectedSegmentIndex == 0 {
             command = UInt16(0x80+(mGroupId*2))
         } else {
@@ -206,7 +206,7 @@ class SecondPage: UIViewController, UIPickerViewDelegate, CBPeripheralDelegate {
         do {
             try sendData(commandData as Data, uuidString: "2A55", writeType: .withResponse)
         } catch {
-            print(error)
+            NSLog("SecondPage, offClick() error:\(error)")
         }
         
         mBrightnessSlider.value = 0
@@ -232,9 +232,9 @@ class SecondPage: UIViewController, UIPickerViewDelegate, CBPeripheralDelegate {
     
     
     @IBAction func backClick(_ sender: Any) {
-        print("Second page on back clicked.")
+        NSLog("SecondPage, on back clicked.")
         if mCentralManager != nil && mConnectPeripheral != nil {
-            print("Second page disconnected.")
+            NSLog("SecondPage, disconnected.")
             let user = UserDefaults.standard
             user.removeObject(forKey: "KEY_PERIPHERAL_UUID")
             user.synchronize()
@@ -268,7 +268,7 @@ class SecondPage: UIViewController, UIPickerViewDelegate, CBPeripheralDelegate {
         do {
             try sendData(commandData as Data, uuidString: "2A55", writeType: .withResponse)
         } catch {
-            print(error)
+            NSLog("SecondPage, onBrightnessBarTouchUpInside() error:\(error)")
         }
     }
     
@@ -277,9 +277,9 @@ class SecondPage: UIViewController, UIPickerViewDelegate, CBPeripheralDelegate {
         if brightness > 254 {
             brightness = 254
         }
-        print("brightness = \(brightness)")
+        NSLog("SecondPage, brightness = \(brightness)")
         mBrightnessSlider.value = Float(brightness)/254
-        print("mBrightnessSlider.value = \(mBrightnessSlider.value)")
+        NSLog("SecondPage, mBrightnessSlider.value = \(mBrightnessSlider.value)")
         mUserSetBrightness.text = brightness.description
         
         // Write value
@@ -297,7 +297,7 @@ class SecondPage: UIViewController, UIPickerViewDelegate, CBPeripheralDelegate {
         do {
             try sendData(commandData as Data, uuidString: "2A55", writeType: .withResponse)
         } catch {
-            print(error)
+            NSLog("SecondPage, onIncreaseBrightness() error:\(error)")
         }
     }
     
@@ -306,9 +306,10 @@ class SecondPage: UIViewController, UIPickerViewDelegate, CBPeripheralDelegate {
         if brightness < 0 {
             brightness = 0
         }
-        print("brightness = \(brightness)")
+        
+        NSLog("SecondPage, brightness = \(brightness)")
         mBrightnessSlider.value = Float(brightness)/254
-        print("mBrightnessSlider.value = \(mBrightnessSlider.value)")
+        NSLog("SecondPage, mBrightnessSlider.value = \(mBrightnessSlider.value)")
         mUserSetBrightness.text = brightness.description
         
         // Write value
@@ -326,14 +327,14 @@ class SecondPage: UIViewController, UIPickerViewDelegate, CBPeripheralDelegate {
         do {
             try sendData(commandData as Data, uuidString: "2A55", writeType: .withResponse)
         } catch {
-            print(error)
+            NSLog("SecondPage, onDecreaseBrightness() error:\(error)")
         }
     }
     
     @IBAction func queryBrightnessClick(_ sender: Any) {
         var command:UInt16
         
-        print("Query brightness group id:\(mGroupId), address id:\(mAddressId)")
+        NSLog("SecondPage, query brightness group id:\(mGroupId), address id:\(mAddressId)")
         if mGroupAddressSegment.selectedSegmentIndex == 0 {
             command = UInt16(0xA000+(0x80+mGroupId*2)+1)
         } else {
@@ -345,7 +346,7 @@ class SecondPage: UIViewController, UIPickerViewDelegate, CBPeripheralDelegate {
         do {
             try sendData(commandData as Data, uuidString: "2A55", writeType: .withResponse)
         } catch {
-            print(error)
+            NSLog("SecondPage, queryBrightnessClick() error:\(error)")
         }
     }
     /*

@@ -30,12 +30,11 @@ class MainPage: UIViewController, CBCentralManagerDelegate, CBPeripheralDelegate
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("viewDidLoad()")
-
+        NSLog("MainPage, viewDidLoad()")
         // Do any additional setup after loading the view.
         
         if mCentralManager != nil && mConnectPeripheral != nil {
-            print("viewDidLoad()-Disconnect")
+            NSLog("MainPage, viewDidLoad()-disconnect")
             let user = UserDefaults.standard
             user.removeObject(forKey: "KEY_PERIPHERAL_UUID")
             user.synchronize()
@@ -55,7 +54,7 @@ class MainPage: UIViewController, CBCentralManagerDelegate, CBPeripheralDelegate
     }
 
     func appDidBecomeActive() {
-        print("Main page get in to foreground.")
+        NSLog("MainPage, get in to foreground.")
         
         let queue = DispatchQueue.global()
         // It will invoke method#1
@@ -63,7 +62,7 @@ class MainPage: UIViewController, CBCentralManagerDelegate, CBPeripheralDelegate
     }
     
     func appMovedToBackground() {
-        print("Main page get into background.")
+        NSLog("MainPage, get into background.")
         let user = UserDefaults.standard
         user.removeObject(forKey: "KEY_PERIPHERAL_UUID")
         user.synchronize()
@@ -95,7 +94,7 @@ class MainPage: UIViewController, CBCentralManagerDelegate, CBPeripheralDelegate
         mSelectedCell.mActivityIndicator.startAnimating()
         
         mTargetDevice = mPeripheralName[indexPath.row]
-        print("Selected device name:"+mTargetDevice+", stop scan.")
+        NSLog("MainPage, selected device name:"+mTargetDevice+", stop scan.")
         
         mCentralManager.stopScan()
         let peripheral = mPeripherals[mTargetDevice]
@@ -115,21 +114,23 @@ class MainPage: UIViewController, CBCentralManagerDelegate, CBPeripheralDelegate
     
     // Method#1
     func centralManagerDidUpdateState(_ central: CBCentralManager) {
-        print("centralManagerDidUpdateState()")
+        NSLog("MainPage, centralManagerDidUpdateState()")
         guard central.state == .poweredOn else {
-            print("Turn on bluetooth")
+            NSLog("MainPage, turn on bluetooth.")
             return
         }
         
         // It will invoke method#2
-        print("centralManager.scanForPeripherals()")
+        NSLog("MainPage, centralManager.scanForPeripherals()")
         mCentralManager.scanForPeripherals(withServices: nil, options: nil)
     }
     
     // Method#2
     func centralManager(_ central: CBCentralManager, didDiscover peripheral: CBPeripheral, advertisementData: [String : Any], rssi RSSI: NSNumber) {
-        print("找到藍牙裝置:\(peripheral.name)")
-        guard peripheral.name != nil else {
+        
+        if let name = peripheral.name {
+            NSLog("MainPage, found BLE device:\(name)")
+        } else {
             return
         }
         
@@ -154,14 +155,14 @@ class MainPage: UIViewController, CBCentralManagerDelegate, CBPeripheralDelegate
     // Method#4
     func peripheral(_ peripheral: CBPeripheral, didDiscoverServices error: Error?) {
         guard error == nil else {
-            print("ERROR:\(#file, #function)")
+            NSLog("MainPage, error:\(#file, #function)")
             return
         }
         
         for service in peripheral.services! {
             if service.uuid.uuidString == "1855" {
                 // It will invoke method#5
-                print("Service:"+service.description)
+                NSLog("MainPage, service:"+service.description)
                 mConnectPeripheral.discoverCharacteristics(nil, for: service)
             }
         }
@@ -170,14 +171,14 @@ class MainPage: UIViewController, CBCentralManagerDelegate, CBPeripheralDelegate
     // Method#5
     func peripheral(_ peripheral: CBPeripheral, didDiscoverCharacteristicsFor service: CBService, error: Error?) {
         guard error == nil else {
-            print("ERROR:\(#file, #function)")
+            NSLog("MainPage, error:\(#file, #function)")
             return
         }
         
         for characteristic in service.characteristics! {
             let uuidString = characteristic.uuid.uuidString
             mCharDictionary[uuidString] = characteristic
-            print("找到:\(uuidString)")
+            NSLog("MainPage, found service:\(uuidString)")
             if uuidString == "2A55" {
                 DispatchQueue.main.async {
                     if self.mTargetDevice == self.DEVICE_NAME_LIGHTING_OFFICE {
@@ -193,26 +194,28 @@ class MainPage: UIViewController, CBCentralManagerDelegate, CBPeripheralDelegate
     }
     
     // 取得Peripheral送過來的資料
-    func peripheral(_ peripheral: CBPeripheral, didUpdateValueFor characteristic: CBCharacteristic, error: Error?) {
-        guard error == nil else {
-            print("ERROR:\(#file, #function)")
-            print(error!)
-            return
-        }
-        
-        if characteristic.uuid.uuidString == "2A56" {//"UUID" has to be changed
-            let data = characteristic.value! as NSData
-            DispatchQueue.main.async {
-                let string = String(data: data as Data, encoding: .utf8)!
-                print(string)
-            }
-        }
-    }
+//    func peripheral(_ peripheral: CBPeripheral, didUpdateValueFor characteristic: CBCharacteristic, error: Error?) {
+//        guard error == nil else {
+//            NSLog("MainPage, error:\(#file, #function)")
+//            if let errorStatement = error {
+//                NSLog("MainPage, error statement:\(errorStatement)")
+//            }
+//            return
+//        }
+//        
+//        if characteristic.uuid.uuidString == "2A56" {
+//            let data = characteristic.value! as NSData
+//            DispatchQueue.main.async {
+//                let string = String(data: data as Data, encoding: .utf8)!
+//                print(string)
+//            }
+//        }
+//    }
     
     // 斷線處理
     func centralManager(_ central: CBCentralManager, didDisconnectPeripheral peripheral: CBPeripheral, error: Error?) {
         let state = UIApplication.shared.applicationState
-        print("didDisconnectPeripheral:application state:\(state.rawValue)")
+        NSLog("MainPage, didDisconnectPeripheral:application state:\(state.rawValue)")
         if state == UIApplicationState.background {
             mCentralManager = nil
             mConnectPeripheral.delegate = nil

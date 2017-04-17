@@ -60,7 +60,7 @@ class ThirdPage: UIViewController, UITableViewDataSource, UITableViewDelegate {
     }
     
     func appMovedToBackground() {
-        print("Third page get into background")
+        NSLog("ThirdPage, get into background.")
         dismiss(animated: true, completion: nil)
     }
 
@@ -103,7 +103,7 @@ class ThirdPage: UIViewController, UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         var command:UInt16 = 0
         mSelectedScene = SCENE_IDS[indexPath.row]
-        print("Selected scene = " + mSelectedScene)
+        NSLog("ThirdPage, selected scene = " + mSelectedScene)
         
         tableView.reloadData()
         
@@ -146,15 +146,15 @@ class ThirdPage: UIViewController, UITableViewDataSource, UITableViewDelegate {
         do {
             try sendData(commandData as Data, uuidString: "2A55", writeType: .withResponse)
         } catch {
-            print(error)
+            NSLog("ThirdPage, tableView didSelect() error:\(error)")
         }
     }
     //- Table view
     
     @IBAction func backClick(_ sender: Any) {
-        print("Third page on back clicked.")
+        NSLog("ThirdPage, on back clicked.")
         if mCentralManager != nil && mConnectPeripheral != nil {
-            print("Third page disconnected.")
+            NSLog("ThirdPage, disconnected.")
             let user = UserDefaults.standard
             user.removeObject(forKey: "KEY_PERIPHERAL_UUID")
             user.synchronize()
